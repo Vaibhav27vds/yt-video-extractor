@@ -13,6 +13,10 @@ import { PORT, TEMP_DIR, REQUEST_TIMEOUT_MS, CONCURRENCY, STORAGE_BUCKET } from 
 import { requireApiKey } from "./middleware/auth";
 
 const app = express();
+
+// Trust first proxy (important for Railway/Render deployments)
+app.set('trust proxy', 1);
+
 app.use(cors());
 app.use(bodyParser.json({ limit: "1mb" }));
 

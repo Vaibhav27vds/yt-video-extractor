@@ -93,7 +93,9 @@ export class YouTubeExtractor {
             geoBypass: true,
             userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36",
             preferFreeFormats: true,
-            ffmpegLocation: path.dirname(ffmpegPath as string)
+            ffmpegLocation: path.dirname(ffmpegPath as string),
+            // Use Android client to bypass bot detection and JS runtime requirement
+            extractorArgs: "youtube:player_client=android"
           } as any);
           clearTimeout(timer);
           logger.info({ msg: "youtube-dl stdout (primary)", stdout: res, attempt });
