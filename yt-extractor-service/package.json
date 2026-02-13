@@ -21,7 +21,6 @@
     "p-limit": "^4.0.0",
     "uuid": "^9.0.1",
     "winston": "^3.9.0",
-    "youtube-dl-exec": "^2.0.0",
     "yt-dlp-exec": "^1.0.2",
     "ytdl-core": "^4.11.5"
   },
